@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input class="js-input" onkeyup="
+      handleMessageKeyup(); ">
+
+    <p class="js-message"></p>
+
+    <script>
+      function handleMessageKeyup() {
+        displayMessage();
+      }
+
+      function displayMessage() {
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message').innerHTML = `${inputElement.value}`;
+      }
+    </script>
+  </body>
+</html>

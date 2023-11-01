@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12c</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="
+      clickButton();
+      ">Start</button>
+
+    <script>
+      const button = document.querySelector('.js-button');
+
+      function clickButton() {
+        button.innerHTML = 'Loading...';
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+
+      button.addEventListener('click', () => {
+        clickButton();
+      });
+      
+    </script>
+  </body>
+</html>

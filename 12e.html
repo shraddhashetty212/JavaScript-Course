@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button class="js-add-to-cart">Add to cart</button>
+    <p class="js-message"></p>
+
+    <script>
+      let timeoutId;
+
+      function addToCart() {
+        const message = document.querySelector('.js-message');
+        message.innerHTML = 'Added';
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+          message.innerHTML = '';
+        }, 2000);
+      }
+
+      document.querySelector('.js-add-to-cart').addEventListener('click', () => {
+        addToCart();
+      });
+    </script>
+  </body>
+</html>

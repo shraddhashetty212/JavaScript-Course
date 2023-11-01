@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9d</title>
+  </head>
+  <body>
+    <input placeholder="Name" class="js-input-textbox" onkeydown="
+      handleNameKeydown();">
+
+    <button onclick="
+    displayName();
+    ">Submit</button>
+
+    <p class="js-input-result"></p>
+
+    <script>
+      function displayName() {
+        const nameTextbox = document.querySelector('.js-input-textbox').value;
+        document.querySelector('.js-input-result').innerHTML = `Your name is: ${nameTextbox}`;
+      }
+
+      function handleNameKeydown() {
+        if (event.key === 'Enter') {
+          displayName();
+        }
+      }
+    </script>
+  </body>
+</html>
